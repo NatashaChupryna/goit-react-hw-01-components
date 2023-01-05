@@ -1,5 +1,5 @@
 import Profile from "./profile/Profile";
-import user from "../components/data/user.json"
+import user from "./data/user";
 export const App = () => {
   return (
     <div
@@ -19,7 +19,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      
+
     </div>
   );
 };
