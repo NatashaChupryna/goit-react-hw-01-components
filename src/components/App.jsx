@@ -1,6 +1,5 @@
-import Profile from './profile/Profile';
-import user from "../components/data/user";
-
+import Profile from "./profile/Profile";
+import user from "../components/data/user.json"
 export const App = () => {
   return (
     <div
