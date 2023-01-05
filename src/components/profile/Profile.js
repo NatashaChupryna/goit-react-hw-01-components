@@ -1,30 +1,41 @@
 import PropTypes from 'prop-types';
+import { FaMapPin } from '@react-icons/all-files/fa/FaMapPin';
+import {
+  Card,
+  Name,
+  StatisticList,
+  StatisticListItem,
+  Nickname,
+} from './Profile.styled';
 
-export default function Profile(username, tag, location, avatar, stats) {
+export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className="profile">
+    <Card>
       <div className="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+        <img src={avatar} alt="User avatar" className="avatar" />
+        <Name>{username}</Name>
+        <Nickname>@{tag}</Nickname>
+        <p>
+          {' '}
+          <FaMapPin /> {location}
+        </p>
       </div>
 
-      <ul className="stats">
-        <li>
+      <StatisticList>
+        <StatisticListItem>
           <span className="label">Followers</span>
           <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
+        </StatisticListItem>
+        <StatisticListItem>
           <span className="label">Views</span>
           <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
+        </StatisticListItem>
+        <StatisticListItem>
           <span className="label">Likes</span>
           <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        </StatisticListItem>
+      </StatisticList>
+    </Card>
   );
 }
 
