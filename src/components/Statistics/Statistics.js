@@ -1,27 +1,35 @@
-// import PropTypes from 'prop-types';
-// import StatisticList from '../StatisticsList/StatisticList';
+import PropTypes from 'prop-types';
+import { StatisticsSection, StatList, ListItem } from './Statistics.styled';
+import getRandomColor from '../utils/randomColor';
 
-// export default function Statistics({ data }) {
-//   return (
-//     <section className="statistics">
-//       <h2 className="title">Upload stats</h2>
-//       {data.map(({ id, label, percentage }) => (
-//         <StatisticList
-//           key={id}
-//           label={label}
-//           percentage={percentage}
-//         />
-//       ))}
-//     </section>
-//   );
-// }
+export default function Statistics({ title, stats }) {
+  return (
+    <StatisticsSection>
+      <h2 className="title">{title}</h2>
+      <StatList>
+        {stats.map(({ id, label, percentage }) => {
+          return (
+            <ListItem
+              style={{ backgroundColor: `${getRandomColor()}` }}
+              key={id}
+            >
+              <span>{label}</span>
+              <span>{percentage}%</span>
+            </ListItem>
+          );
+        })}
+      </StatList>
+    </StatisticsSection>
+  );
+}
 
-// Statistics.propTypes = {
-//   data: PropTypes.arrayOf(
-//     PropTypes.exact({
-//       id: PropTypes.string.isRequired,
-//       label: PropTypes.string.isRequired,
-//       percentage: PropTypes.number.isRequired,
-//     }).isRequired
-//   ),
-// };
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ),
+};
