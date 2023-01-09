@@ -5,7 +5,7 @@ import { FriendtList, FriendsListItem, UserOnline, UserOffline } from './FriendL
 export default function FriendList({friends}) {
     return <FriendtList>{friends.map(({ id, avatar, name, isOnline }) => {
         return (
-          <FriendsListItem>
+          <FriendsListItem key={id}>
         {isOnline ? <UserOnline /> : <UserOffline />}
          <img src={avatar} alt="User avatar" width="60" />
             <p>{name}</p>

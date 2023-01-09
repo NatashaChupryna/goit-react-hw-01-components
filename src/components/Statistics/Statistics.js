@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import { StatisticsSection, StatList, ListItem } from './Statistics.styled';
+import {
+  StatisticsSection,
+  StatList,
+  ListItem,
+  DataSpan,
+} from './Statistics.styled';
 import getRandomColor from '../utils/randomColor';
 
 export default function Statistics({ title, stats }) {
@@ -13,8 +18,8 @@ export default function Statistics({ title, stats }) {
               style={{ backgroundColor: `${getRandomColor()}` }}
               key={id}
             >
-              <span>{label}</span>
-              <span>{percentage}%</span>
+              <DataSpan>{label}</DataSpan>
+              <DataSpan>{percentage}%</DataSpan>
             </ListItem>
           );
         })}

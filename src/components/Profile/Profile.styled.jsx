@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.div`
-  padding: 30px 60px;
+  padding-top: 24px;
   text-align: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -23,8 +23,11 @@ export const StatisticList = styled.ul`
   display: flex;
   gap: 50px;
   background-color: #d8d8d8;
+  margin: 0;
+  padding: 20px 60px;
 `;
 export const StatisticListItem = styled.li`
   display: flex;
   flex-direction: column;
+  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
 `;

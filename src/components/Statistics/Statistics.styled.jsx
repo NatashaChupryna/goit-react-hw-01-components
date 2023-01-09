@@ -24,3 +24,7 @@ export const ListItem = styled.li`
   align-items: center;
   justify-content: center;
 `;
+
+export const DataSpan = styled.span`
+  text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+`;
