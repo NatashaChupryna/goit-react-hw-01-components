@@ -24,7 +24,7 @@ export const StatisticList = styled.ul`
   gap: 50px;
   background-color: #d8d8d8;
   margin: 0;
-  padding: 20px 60px;
+  padding: 30px 60px;
 `;
 export const StatisticListItem = styled.li`
   display: flex;
