@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import {
   Table,
   TableRow,
+  TableBody,
   TableData,
   TableHead,
 } from './TransactionHistory.styled.jsx';
@@ -18,13 +19,13 @@ export default function TransactionHistory({ items }) {
       </thead>
       {items.map(({ id, type, amount, currency }) => {
         return (
-          <tbody key={id}>
+          <TableBody key={id}>
             <TableRow>
               <TableData>{type}</TableData>
               <TableData>{amount}</TableData>
               <TableData>{currency}</TableData>
             </TableRow>
-          </tbody>
+          </TableBody>
         );
       })}
     </Table>
