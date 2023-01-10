@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import getRandomColor from '../utils/randomColor';
 
 export const StatisticsSection = styled.section`
+  width: 600px;
   padding: 30px 60px;
   text-align: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

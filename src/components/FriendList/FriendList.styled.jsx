@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 export const FriendtList = styled.ul`
   list-style: none;
   margin: 0;
+  margin-left: 440px;
   padding: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 260px;
