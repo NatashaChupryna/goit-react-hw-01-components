@@ -3,13 +3,15 @@ import styled from '@emotion/styled';
 export const FriendtList = styled.ul`
   list-style: none;
   margin: 0;
-  margin-left: 440px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 260px;
   gap: 25px;
+  padding: 30px;
+  background-color: #dedede;
+  width: 1200px;
 `;
 export const FriendsListItem = styled.li`
   display: flex;
@@ -17,6 +19,7 @@ export const FriendsListItem = styled.li`
   justify-content: flex-start;
   gap: 10px;
   width: 240px;
+  background-color: white;
   padding: 10px 15px;
   box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
     rgb(0 0 0 / 30%) 0px 30px 60px -30px,

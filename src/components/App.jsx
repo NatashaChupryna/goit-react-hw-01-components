@@ -18,6 +18,8 @@ export const App = () => {
         gap: '50px',
         flexDirection: 'column',
         paddingLeft: '100px',
+        paddingTop: '50px',
+        paddingBottom: '50px',
       }}
     >
       <Profile
