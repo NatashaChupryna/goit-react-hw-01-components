@@ -10,7 +10,7 @@ import getRandomColor from '../utils/randomColor';
 export default function Statistics({ title, stats }) {
   return (
     <StatisticsSection>
-      {title.length > 0 ? <h2>{title}</h2> : <h2>Upload stats</h2>}
+      {title && <h2>{title}</h2>}
       <StatList>
         {stats.map(({ id, label, percentage }) => {
           return (
